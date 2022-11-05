@@ -5,3 +5,4 @@
       systemd:
         name: ntp
         state: started
+      become: yes
