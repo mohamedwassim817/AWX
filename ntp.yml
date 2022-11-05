@@ -1,0 +1,4 @@
+- name: Start service ntp, if not started
+  ansible.builtin.service:
+    name: ntp
+    state: started
