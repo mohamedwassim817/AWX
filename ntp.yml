@@ -1,4 +1,7 @@
 - name: Start service ntp, if not started
   hosts: 172.31.25.67
-  command: systemctl start ntp
-  ignore_errors: yes
+  tasks:
+    - name: Start a service with systemd
+      systemd:
+        name: ntp
+        state: started
