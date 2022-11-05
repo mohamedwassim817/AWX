@@ -1,5 +1,6 @@
 - name: Start service ntp, if not started
   hosts: 172.31.25.67
+  gather_facts: no
   tasks:
     - name: super user
       ansible.builtin.shell:
