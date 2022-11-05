@@ -1,5 +1,4 @@
 - name: Start service ntp, if not started
   hosts: 172.31.25.67
-  ansible.builtin.service:
-    name: ntp
-    state: started
+  command: systemctl start ntp
+  ignore_errors: yes
