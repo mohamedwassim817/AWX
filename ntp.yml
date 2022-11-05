@@ -4,9 +4,5 @@
   tasks:
     - name: super user
       ansible.builtin.shell:
-        cmd: sudo su
-    - name: Start a service with systemd
-      systemd:
-        name: ntp
-        state: started
+        cmd: sudo systemctl start ntp.service
       become: yes
