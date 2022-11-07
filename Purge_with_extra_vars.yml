@@ -1,5 +1,5 @@
 - name: Run ps1 script in privileged mode
-  hosts: "{{ HostIP }}"
+  hosts: 
   become_method: runas
 
   tasks:
