@@ -2,9 +2,6 @@
   hosts: 172.30.28.164
   become_method: runas
 
-  vars:
-    ansible_become_password: )ehKwOJQ@I946h&;VNa(MEyAGeX=wH!Y
-
   tasks:
     - win_shell: 'Get-ChildItem -Path "C:\Users\Administrator\tmp" *.* -Recurse | Remove-Item -Force -Recurse'
       become: yes
