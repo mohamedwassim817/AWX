@@ -1,0 +1,12 @@
+- name: Run ps1 script in privileged mode
+  hosts: 172.30.28.164
+  become_method: runas
+
+  tasks:
+    - win_shell: |
+        $paths = @("C:\Users\Administrator\tmp","C:\Users\Administrator\tmp1","C:\Users\Administrator\tmp2","C:\Users\Administrator\tmp3")
+             For ($i=0; $i -lt $paths.Length; $i++) {
+                Get-ChildItem -Path $paths[$i] -Recurse | Remove-Item -Force -Recurse
+             }
+      become: yes
+      become_user: Administrator
