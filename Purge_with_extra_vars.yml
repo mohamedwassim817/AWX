@@ -12,8 +12,9 @@
       become_user: Administrator
      
     - name: "Restart zabbix agent"
-      service:
-         name: zabbix-agent
-         state: restarted
+      ansible.builtin.service:
+        name: sshd
+        state: restarted
+        enabled: true
       become: yes
 
