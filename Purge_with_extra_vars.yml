@@ -9,7 +9,8 @@
                 Get-ChildItem -Path $paths[$i] -Recurse | Remove-Item -Force -Recurse
              }
       become: yes
-     
+      become_user: Administrator
+      
     - name: "Restart zabbix agent"
       ansible.builtin.service:
         name: sshd
