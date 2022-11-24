@@ -1,0 +1,16 @@
+- name: Starting robot manager
+  hosts: "{{ HostIP }}"
+  become_method: runas
+
+  tasks:
+    - win_shell: |
+        cd  C:\Program Files\IP-LABEL\DFYROBOT\exe\ 
+        IPLCoreServiceAdminCMD.exe type -start -id DFY_QUEUE_SCHEDULER 
+      
+      become: yes
+      become_user: Administrator
+      
+    - name: "Restart zabbix agent"
+      win_service:
+       name: Zabbix Agent
+       state: restarted
