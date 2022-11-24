@@ -1,4 +1,3 @@
----
  - name: "Install Filbeat Agent"
    hosts: "{{ HostIP }}"
    gather_facts: no
