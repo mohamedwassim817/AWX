@@ -25,17 +25,17 @@
         
     - name: 'event acknolagement'
       uri:
-        url: 'http://172.30.19.224/zabbix/api_jsonrpc.php'
-        method: POST
-        body:
-          jsonrpc: '2.0'
-          method: event.acknowledge
-          params:
-             eventids: '{{ EventId }}'
-             action: 6
-             message: 'Problem resolved with AWX.'
-          auth: 5cc4dc1948cce894436d76ea3abdb113
-          id: 1
+         url: 'http://172.30.19.224/zabbix/api_jsonrpc.php'
+         method: POST
+         body:
+           jsonrpc: '2.0'
+           method: event.acknowledge
+           params:
+              eventids: '{{ EventId }}'
+              action: 6
+              message: 'Problem resolved with AWX.'
+           auth: 5cc4dc1948cce894436d76ea3abdb113
+           id: 1
          body_format: json
          headers:
            Content-Type: application/json
