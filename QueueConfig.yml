@@ -24,7 +24,7 @@
         msg: "Event ID from zabbix API is : {{ EventId }}" 
         
     - name: 'event acknolagement'
-      uri:
+      ansible.windows.win_uri:
          url: 'http://172.30.19.224/zabbix/api_jsonrpc.php'
          method: POST
          body:
