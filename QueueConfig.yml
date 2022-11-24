@@ -1,4 +1,4 @@
-- name: Starting robot manager
+- name: Reconfigure Queue
   hosts: "{{ HostIP }}"
   become_method: runas
 
