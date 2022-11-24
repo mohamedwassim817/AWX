@@ -1,8 +1,8 @@
- - name: "Install Filbeat Agent"
-   hosts: "{{ HostIP }}"
-   gather_facts: no
+- name: "Install Filbeat Agent"
+  hosts: "{{ HostIP }}"
+  gather_facts: no
   
-   tasks:
+  tasks:
      - name: Download Filbeat Agent msi
        win_get_url:
          url: https://d2iqp4b25oangd.cloudfront.net/Elk/Filebeat/filebeat-7.17.3-windows-x86_64.msi
