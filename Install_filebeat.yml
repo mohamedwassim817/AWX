@@ -1,0 +1,22 @@
+---
+ - name: "Install Filbeat  Agent"
+   hosts: "{{ HostIP }}"
+   gather_facts: no
+  
+   tasks:
+     - name: Download Filbeat Agent msi
+       win_get_url:
+         url: https://d2iqp4b25oangd.cloudfront.net/Elk/Filebeat/filebeat-7.17.3-windows-x86_64.msi
+         url_username: exploit
+         url_password: "{{url_password}}"
+         dest: C:\Users\Administrator\Downloads\filebeat-7.17.3-windows-x86_64.msi
+         force: yes
+
+     - name: "Kill elk filebeat process"
+       win_shell:  "taskkill /IM 'filebeat.exe' /F"
+       ignore_errors: yes
+
+     - name : install Filebeat
+       win_package:
+          path: C:\Users\Administrator\Downloads\filebeat-7.17.3-windows-x86_64.msi
+          state: present
