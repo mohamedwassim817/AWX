@@ -34,8 +34,8 @@
              eventids: '{{ EventId }}'
              action: 6
              message: 'Problem resolved with AWX.'
-           auth: 5cc4dc1948cce894436d76ea3abdb113
-           id: 1
+          auth: 5cc4dc1948cce894436d76ea3abdb113
+          id: 1
          body_format: json
          headers:
            Content-Type: application/json
