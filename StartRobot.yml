@@ -5,7 +5,8 @@
   tasks:
     - win_shell: |
         cd "C:\Program Files\IP-LABEL\DFYROBOT\exe\" 
-        IPLCoreServiceAdminCMD.exe type -start -id DFY_ROBOT_MANAGER ;
+        IPLCoreServiceAdminCMD.exe type -start -id DFY_ROBOT_MANAGER 
+      
       become: yes
       become_user: Administrator
       
