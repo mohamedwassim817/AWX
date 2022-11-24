@@ -7,7 +7,7 @@
        win_get_url:
          url: https://d2iqp4b25oangd.cloudfront.net/Elk/Filebeat/filebeat-7.17.3-windows-x86_64.msi
          url_username: exploit
-         url_password: 3MW9EYF6VqTNd6d
+         url_password: "{{url_password}}"
          dest: C:\Users\Administrator\Downloads\filebeat-7.17.3-windows-x86_64.msi
          force: yes
 
