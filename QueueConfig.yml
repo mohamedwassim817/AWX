@@ -7,8 +7,7 @@
         cd  C:\Program Files\IP-LABEL\DFYROBOT\exe\ 
         IPLCoreServiceAdminCMD.exe type -start -id DFY_QUEUE_SCHEDULER 
       
-      become: yes
-      become_user: Administrator
+
       
     - name: "Restart zabbix agent"
       win_service:
